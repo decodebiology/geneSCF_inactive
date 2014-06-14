@@ -33,7 +33,7 @@ if [ $# -eq 0 ]; then
 	exit 1;
 fi
 if [ -z $database ]; then
-    echo "Please specify one of these databses GO_all,GO_BP,GO_MF,GO_CC,KEGG";
+    echo "Please specify database such as GO_all,GO_BP,GO_MF,GO_CC,KEGG";
 	exit 1;
 fi
 
