@@ -184,4 +184,4 @@ print RESULT @$bhres[$i]."\t".@$holmres[$i]."\t".@$bfres[$i]."\t".@$hommel[$i]."
 
 
 close(RESULT);
-print"=================\nRun successful. Check your output directory $ARGV[2] \n=================\n\nParameters used:\n\nbackground genes:\t$ARGV[4]\nIdentitiy:\t\t$mytype\nDatabase used:\t\t$ARGV[3]\nOutput file:\t\t@ARGV[2]@{myout[$#myout]}_${ARGV[3]}_functional_classification.tsv\n\n\n---------------------\n\nAuthor: Santhilal Subhash\nsanthilal.subhash\@gu.se\nLast Updated: 2014 June 14\n"
+print"=================\nRun successful. Check your output directory $ARGV[2] \n=================\n\nParameters used:\n\nbackground genes:\t$ARGV[4]\nIdentitiy:\t\t$mytype\nDatabase used:\t\t$ARGV[3]\nOutput file:\t\t@ARGV[2]@{myout[$#myout]}_${ARGV[3]}_functional_classification.tsv\n\t\tWARNING: Your output is not sorted with P-val/FDR.\n\n\n---------------------\n\nAuthor: Santhilal Subhash\nsanthilal.subhash\@gu.se\nLast Updated: 2014 June 14\n"

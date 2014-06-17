@@ -3,8 +3,8 @@
 $/=undef;
 use Cwd;
 $pwd=cwd();
-use lib "class/$pwd/lib";
-use lib "class/$pwd/lib/Tie-IxHash-1.23";
+use lib "$ARGV[5]/class/lib";
+use lib "$ARGV[5]/class//lib/Tie-IxHash-1.23";
 use Tie::IxHash;
 use Statistics::Multtest qw(bonferroni holm hommel hochberg BH BY qvalue);
 use Statistics::Multtest qw(:all);
@@ -24,70 +24,70 @@ open(RESULT,">@ARGV[2]/@{myout[$#myout]}_${ARGV[3]}_functional_classification.ts
 if($ARGV[0] eq "sym" && $ARGV[3] eq "GO_all")
 {
 $mytype="Gene Symbol";
-open(IN1,"./annotation/gene_association.grouped.annotated140122_new.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/gene_association.grouped.annotated140122_new.txt") or die "Error opening in file";
 }
 if($ARGV[0] eq "gid" && $ARGV[3] eq "GO_all")
 {
 $mytype="Entrez GeneID";
-open(IN1,"./annotation/gene_association.grouped.annotated_RplcdIDs140122_new.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/gene_association.grouped.annotated_RplcdIDs140122_new.txt") or die "Error opening in file";
 }
 
 
 if($ARGV[0] eq "sym" && $ARGV[3] eq "GO_BP")
 {
 $mytype="Gene Symbol";
-open(IN1,"./annotation/gene_association.grouped.annotated140122_new_bp.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/gene_association.grouped.annotated140122_new_bp.txt") or die "Error opening in file";
 }
 if($ARGV[0] eq "gid" && $ARGV[3] eq "GO_BP")
 {
 $mytype="Entrez GeneID";
-open(IN1,"./annotation/gene_association.grouped.annotated_RplcdIDs140122_new_bp.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/gene_association.grouped.annotated_RplcdIDs140122_new_bp.txt") or die "Error opening in file";
 }
 
 if($ARGV[0] eq "sym" && $ARGV[3] eq "GO_MF")
 {
 $mytype="Gene Symbol";
-open(IN1,"./annotation/gene_association.grouped.annotated140122_new_mf.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/gene_association.grouped.annotated140122_new_mf.txt") or die "Error opening in file";
 }
 if($ARGV[0] eq "gid" && $ARGV[3] eq "GO_MF")
 {
 $mytype="Entrez GeneID";
-open(IN1,"./annotation/gene_association.grouped.annotated_RplcdIDs140122_new_mf.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/gene_association.grouped.annotated_RplcdIDs140122_new_mf.txt") or die "Error opening in file";
 }
 
 if($ARGV[0] eq "sym" && $ARGV[3] eq "GO_CC")
 {
 $mytype="Gene Symbol";
-open(IN1,"./annotation/gene_association.grouped.annotated140122_new_cc.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/gene_association.grouped.annotated140122_new_cc.txt") or die "Error opening in file";
 }
 if($ARGV[0] eq "gid" && $ARGV[3] eq "GO_CC")
 {
 $mytype="Entrez GeneID";
-open(IN1,"./annotation/gene_association.grouped.annotated_RplcdIDs140122_new_cc.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/gene_association.grouped.annotated_RplcdIDs140122_new_cc.txt") or die "Error opening in file";
 }
 
 #### KEGG DB ####
 if($ARGV[0] eq "sym" && $ARGV[3] eq "KEGG")
 {
 $mytype="Gene Symbol";
-open(IN1,"./annotation/KEGG_pathway_updated130711_geneSym.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/KEGG_pathway_updated130711_geneSym.txt") or die "Error opening in file";
 }
 if($ARGV[0] eq "gid" && $ARGV[3] eq "KEGG")
 {
 $mytype="Entrez GeneID";
-open(IN1,"./annotation/KEGG_pathway_updated130711_geneID.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/KEGG_pathway_updated130711_geneID.txt") or die "Error opening in file";
 }
 
 #### REACTOME DB ####
 if($ARGV[0] eq "sym" && $ARGV[3] eq "REACTOME")
 {
 $mytype="Gene Symbol";
-open(IN1,"./annotation/ReactomePathways_updated140614_geneSym.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/ReactomePathways_updated140614_geneSym.txt") or die "Error opening in file";
 }
 if($ARGV[0] eq "gid" && $ARGV[3] eq "REACTOME")
 {
 $mytype="Entrez GeneID";
-open(IN1,"./annotation/ReactomePathways_updated140614_RplcdIDs.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/ReactomePathways_updated140614_RplcdIDs.txt") or die "Error opening in file";
 }
 
 
@@ -144,7 +144,7 @@ if($gnum>0)
 {
 $x=$gnum;
 $n=$gene_list;
-$M=$knum;
+$M=$knum; ## total genes in process
 $N=$ARGV[4];
 
 
@@ -184,4 +184,4 @@ print RESULT @$bhres[$i]."\t".@$holmres[$i]."\t".@$bfres[$i]."\t".@$hommel[$i]."
 
 
 close(RESULT);
-print"=================\nRun successful. Check your output directory $ARGV[2] \n=================\n\nParameters used:\n\nbackground genes:\t$ARGV[4]\nIdentitiy:\t\t$mytype\nDatabase used:\t\t$ARGV[3]\nOutput file:\t\t@ARGV[2]@{myout[$#myout]}_${ARGV[3]}_functional_classification.tsv\n\n\n---------------------\n\nAuthor: Santhilal Subhash\nsanthilal.subhash\@gu.se\nLast Updated: 2014 June 14\n"
+print"=================\nRun successful. Check your output directory $ARGV[2] \n=================\n\nParameters used:\n\nbackground genes:\t$ARGV[4]\nIdentitiy:\t\t$mytype\nDatabase used:\t\t$ARGV[3]\nOutput file:\t\t@ARGV[2]@{myout[$#myout]}_${ARGV[3]}_functional_classification.tsv\nWARNING: Your output is not sorted with P-val/FDR.\n\n\n---------------------\n\nAuthor: Santhilal Subhash\nsanthilal.subhash\@gu.se\nLast Updated: 2014 June 14\n"
