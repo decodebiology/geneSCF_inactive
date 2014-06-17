@@ -69,7 +69,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 DT=`/bin/date`
 echo "processing started....$DT" 
 
-perl ${DIR}/class/functional_class.pl ${GTYPE} ${INFILE} ${OUTPATH} ${database} ${background} ${DIR}
+perl /home/santhilal/bin/gene_enrichment-master/class/functional_class.pl ${GTYPE} ${INFILE} ${OUTPATH} ${database} ${background} ${DIR}
 
 DT=`/bin/date`
 echo "$DT finished processing" 
