@@ -91,7 +91,7 @@ open(IN1,"$ARGV[5]/annotation/ReactomePathways_updated140614_RplcdIDs.txt") or d
 }
 
 
-open(IN2,$ARGV[1]) or print "Error opening input file: $ARGV[1]";
+open(IN2,$ARGV[1]) or print "**Error opening input file: $ARGV[1]";
 
 print RESULT "Genes\tProcess\tGO:Class\tnum_of_Genes\tP-value\tEASE (http://david.abcc.ncifcrf.gov/content.jsp?file=functional_annotation.html#fisher) \tBenjamini and Hochberg (FDR)\t Hommel singlewise process\tBonferroni single-step process\tHommel singlewise process\tHochberg step-up process\tBenjamini and Yekutieli\n";
 
