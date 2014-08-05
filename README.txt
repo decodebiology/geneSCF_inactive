@@ -1,4 +1,4 @@
-Functional Classification for set of genes (also > 3000 genes)
+Gene Set Clustering based on Functional annotation
 ----------------------------------------------------------------------------
 INSTALL:
 
