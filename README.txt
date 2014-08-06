@@ -1,5 +1,7 @@
 Gene Set Clustering based on Functional annotation
 ----------------------------------------------------------------------------
+https://github.com/santhilalsubhash/geneSCF/wiki
+
 INSTALL:
 
 No installation required
@@ -40,3 +42,4 @@ Options:
 Author: Santhilal Subhash
 santhilal.subhash@gu.se
 Last Updated: 2014 June 14
+https://github.com/santhilalsubhash/geneSCF/wiki
