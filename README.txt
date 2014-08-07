@@ -6,6 +6,15 @@ INSTALL:
 
 No installation required
 
+TEST DATASETS:
+
+Run command
+
+./test_geneSCF
+
+You will get output in './test/output/' directory.
+
+
 USAGE: 
 
 geneSCF <OPTIONS> -i=<INPUT FILE> -o=<OUTPUT PATH/FOLDER> -db=<GO_all|GO_BP|GO_MF|GO_CC|KEGG|REACTOME>
