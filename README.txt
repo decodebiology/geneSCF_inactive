@@ -36,8 +36,9 @@ Options:
 			reactome 'REACTOME' (Without quotes).Soon updating with BIOCARTA.
 
 [-o= | --outpath=]	Path to save output file. The output will be with saved in the 
-			provided location as {INPUT_FILE_NAME}_{database}_functional_classification.tsv 
-			(tab-seperated file).
+			provided existing location as {INPUT_FILE_NAME}_{database}_functional_classification.tsv 
+			(tab-seperated file). Note: This tool will not create output directory, only outputs in 
+			exiting location.
 
 [-bg= | --background=]	Total background genes to consider (default : 30000).
 
