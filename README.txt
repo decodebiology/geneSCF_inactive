@@ -48,7 +48,7 @@ Options:
 
 
 --------------------------
-
+Cite using link: https://github.com/santhilalsubhash/geneSCF.git
 
 Author: Santhilal Subhash
 santhilal.subhash@gu.se
