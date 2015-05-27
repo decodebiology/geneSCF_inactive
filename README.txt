@@ -48,8 +48,11 @@ Options:
 
 
 --------------------------
-Cite using link: https://github.com/santhilalsubhash/geneSCF.git
+Cite using website: 
+"Subhash S: GeneSCF: Gene Set Clustering based on Functional annotation. 2013-2014. 
+[https://github.com/santhilalsubhash/geneSCF.git]"
 
+--------------------------
 Author: Santhilal Subhash
 santhilal.subhash@gu.se
 Last Updated: 2014 June 14
