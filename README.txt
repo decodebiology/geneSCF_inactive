@@ -54,5 +54,5 @@ Cite using website:
 --------------------------
 Author: Santhilal Subhash
 santhilal.subhash@gu.se
-Last Updated: 2014 June 14
+Last Updated: 2015 June 05
 https://github.com/santhilalsubhash/geneSCF/wiki
