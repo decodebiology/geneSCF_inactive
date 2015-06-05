@@ -90,6 +90,19 @@ $mytype="Entrez GeneID";
 open(IN1,"$ARGV[5]/annotation/ReactomePathways_updated150605_RplcdIDs.txt") or die "Error opening in file";
 }
 
+if($ARGV[0] eq "sym" && $ARGV[3] eq "NCG")
+{
+$mytype="Gene Symbol";
+open(IN1,"$ARGV[5]/annotation/NCG4.0_annotation_Updated150605_geneSym.txt") or die "Error opening in file";
+}
+
+if($ARGV[0] eq "gid" && $ARGV[3] eq "NCG")
+{
+$mytype="Gene Symbol";
+open(IN1,"$ARGV[5]/annotation/NCG4.0_annotation_Updated150605_RplcdIDs.txt") or die "Error opening in file";
+}
+
+
 
 open(IN2,$ARGV[1]) or print "\n***\nError opening input file: $ARGV[1]\n***\n\n";
 
