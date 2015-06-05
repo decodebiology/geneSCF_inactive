@@ -82,18 +82,18 @@ open(IN1,"$ARGV[5]/annotation/KEGG_pathway_updated130711_geneID.txt") or die "Er
 if($ARGV[0] eq "sym" && $ARGV[3] eq "REACTOME")
 {
 $mytype="Gene Symbol";
-open(IN1,"$ARGV[5]/annotation/ReactomePathways_updated140614_geneSym.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/ReactomePathways_updated150605_geneSym.txt") or die "Error opening in file";
 }
 if($ARGV[0] eq "gid" && $ARGV[3] eq "REACTOME")
 {
 $mytype="Entrez GeneID";
-open(IN1,"$ARGV[5]/annotation/ReactomePathways_updated140614_RplcdIDs.txt") or die "Error opening in file";
+open(IN1,"$ARGV[5]/annotation/ReactomePathways_updated150605_RplcdIDs.txt") or die "Error opening in file";
 }
 
 
 open(IN2,$ARGV[1]) or print "\n***\nError opening input file: $ARGV[1]\n***\n\n";
 
-print RESULT "Genes\tProcess\tGO:Class\tnum_of_Genes\tP-value\tEASE (http://david.abcc.ncifcrf.gov/content.jsp?file=functional_annotation.html#fisher) \tBenjamini and Hochberg (FDR)\t Hommel singlewise process\tBonferroni single-step process\tHommel singlewise process\tHochberg step-up process\tBenjamini and Yekutieli\n";
+print RESULT "Genes\tProcess\tGO:Class\tnum_of_Genes\tgene_group\tpercentage%\tP-value\tEASE (http://david.abcc.ncifcrf.gov/content.jsp?file=functional_annotation.html#fisher) \tBenjamini and Hochberg (FDR)\t Hommel singlewise process\tBonferroni single-step process\tHommel singlewise process\tHochberg step-up process\tBenjamini and Yekutieli\n";
 
 while(<IN1>){
 	chomp;
@@ -156,7 +156,8 @@ $ease_value= calculateStatistic( n11=>$x-1,n1p=>$n,np1=>$x+$M,npp=>$N+$n);
 push(@new,$fisher_value);
 
 ##print RESULT "\t$keykg\t$kegg{$keykg}[0]\t$gnum\t$knum\t$fisher_value\t$ease_value\n";
-push(@finres,"@gset\t$keykg\t$kegg{$keykg}[0]\t$gnum\t$fisher_value\t$ease_value\t");
+$percent=(($gnum/$knum)*100);
+push(@finres,"@gset\t$keykg\t$kegg{$keykg}[0]\t$gnum\t$knum\t$percent\t$fisher_value\t$ease_value\t");
 
 }
 
@@ -184,4 +185,4 @@ print RESULT @$bhres[$i]."\t".@$holmres[$i]."\t".@$bfres[$i]."\t".@$hommel[$i]."
 
 
 close(RESULT);
-print"=================\nRun successful. Check your output directory $ARGV[2] \n=================\n\nParameters used:\n\nbackground genes:\t$ARGV[4]\nIdentitiy:\t\t$mytype\nDatabase used:\t\t$ARGV[3]\nOutput file:\t\t@ARGV[2]@{myout[$#myout]}_${ARGV[3]}_functional_classification.tsv\n\t\tWARNING: Your output is not sorted with P-val/FDR.\n\n\n---------------------\n\nAuthor: Santhilal Subhash\nsanthilal.subhash\@gu.se\nLast Updated: 2014 June 14\n"
+print"=================\nRun successful. Check your output directory $ARGV[2] \n=================\n\nParameters used:\n\nbackground genes:\t$ARGV[4]\nIdentitiy:\t\t$mytype\nDatabase used:\t\t$ARGV[3]\nOutput file:\t\t@ARGV[2]@{myout[$#myout]}_${ARGV[3]}_functional_classification.tsv\n\t\tWARNING: Your output is not sorted with P-val/FDR.\n\n\n---------------------\n\nAuthor: Santhilal Subhash\nsanthilal.subhash\@gu.se\nLast Updated: 2015 June 05\n"
