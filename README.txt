@@ -49,13 +49,13 @@ Options:
 
 --------------------------
 Cite using website: 
-" 
+
 MEG3 long noncoding RNA regulates TGF-β pathway genes through formation of RNA-DNA triplex structures.
 Mondal T, Subhash S, Vaid R, Enroth S, Sireesha K , Reinius B, Mitra S, Mohammed A, James AR, Hoberg E, Moustakas A, Gyllensten U, Jones S, Gustafsson C, Sims AH, Westerlund F, Gorab E and Chandrasekhar Kanduri.
 Nature Communications 6, Article number: 7743 doi:10.1038/ncomms8743
+
 http://www.nature.com/ncomms/2015/150724/ncomms8743/full/ncomms8743.html
 
-"
 
 --------------------------
 Author: Santhilal Subhash
