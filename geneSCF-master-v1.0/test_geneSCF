@@ -1,2 +1,0 @@
-#!/bin/bash
-./geneSCF -i=./test/sample_gene_list_sym -db=GO_BP -o=./test/output -t=sym

@@ -1,6 +1,0 @@
-
-./update_kegg.sh $1;
-#perl replaceIDS.pl $2 DB/gene_list.txt > user_mapped.list
-
-perl replaceIDS.pl DB/gene_list.txt $2 | awk '!x[$0]++' > user_mapped.list;
-cat user_mapped.list | cut -f1 | awk '!x[$0]++' > input_list.txt;
