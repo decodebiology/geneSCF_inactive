@@ -1,6 +1,6 @@
 Gene Set Clustering based on Functional annotation
 ----------------------------------------------------------------------------
-Hosting website: https://genescf.kandurilab.org
+Hosting website: http://genescf.kandurilab.org
 
 INSTALL:
 
