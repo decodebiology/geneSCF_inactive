@@ -1,0 +1,37 @@
+organism	Description
+GeneDB_Lmajor	Leishmania major
+GeneDB_Pfalciparum	Plasmodium falciparum
+GeneDB_Tbrucei	Trypanosoma brucei
+PAMGO_Atumefaciens	Agrobacterium tumefaciens str. C58
+PAMGO_Ddadantii	Dickeya dadantii
+PAMGO_Mgrisea	Magnaporthe grisea
+PAMGO_Oomycetes	Oomycetes
+aspgd	Aspergillus nidulans
+cgd	Candida albicans
+dictyBase	Dictyostelium discoideum
+ecocyc	Escherichia coli
+fb	Drosophila melanogaster
+goa_chicken	Gallus gallus
+goa_cow	Bos taurus
+goa_dog	Canis lupus familiaris
+goa_human	Homo sapiens
+goa_pdb	Protein Data Bank [multispecies]
+goa_pig	Sus scrofa
+goa_ref_chicken	Gallus gallus (Reference)
+goa_ref_cow	Bos taurus (Reference)
+goa_ref_dog	Canis lupus familiaris (Reference)
+goa_ref_human	Homo sapiens (Reference)
+goa_ref_pig	Sus scrofa (Reference)
+goa_uniprot_noiea	UniProt [multispecies], no IEA annotations
+goa_uniprot	UniProt [multispecies]
+gramene_oryza	Oryza sativa
+jcvi	Comprehensive Microbial Resource [multispecies]
+mgi	Mus musculus
+pombase	Schizosaccharomyces pombe
+pseudocap	Pseudomonas aeruginosa PAO1
+rgd	Rattus norvegicus
+sgd	Saccharomyces cerevisiae
+sgn	Solanaceae
+tair	Arabidopsis thaliana
+wb	Caenorhabditis elegans
+zfin	Danio rerio

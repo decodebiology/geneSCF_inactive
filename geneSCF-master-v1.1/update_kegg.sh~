@@ -1,0 +1,36 @@
+
+#wget ftp://ftp.ncbi.nlm.nih.gov/gene/DATA/gene_info.gz
+#gzip -d gene_info.gz
+#cat gene_info | grep "^9606" | awk -F '\t' '{print $2"\t"$3;}' > geneSymWithID_9606.txt
+
+#Whole API link
+#http://www.kegg.jp/kegg/rest/keggapi.html
+#List organisms
+#http://rest.kegg.jp/list/organism
+#curl -s -S http://rest.kegg.jp/list/organism | grep "mouse"
+#echo "Enter code of the organism (three letter) followed by [ENTER]:" read organism;
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
+#curl http://rest.kegg.jp/list/pathway/$organism | sed 's/path\://' | cut -f1
+organism=$1
+
+PATHWAY=(`curl -s -S http://rest.kegg.jp/list/pathway/$organism | sed 's/path\://' | cut -f1`);
+(
+for i in ${PATHWAY[@]}
+{
+t1=(`curl http://rest.kegg.jp/link/genes/$i | sed 's/path\://g' | sed "s/$organism\://g" | awk 'BEGIN{FS="\t"}{ if( !seen[$1]++ ) order[++oidx] = $1; stuff[$1] = stuff[$1] $2 "," } END { for( i = 1; i <= oidx; i++ ) print order[i]"\t"stuff[order[i]] }' | cut -f2 `)
+
+t2=(`curl -s -S http://rest.kegg.jp/list/pathway/$organism | grep "$i" | sed 's/path\://' | sed 's/\t/~/' | sed 's/ - /\t/' | cut -f1 | sed 's/ /_/g' `)
+
+echo -e $t2'\t'$t1
+
+}
+)>$DIR/annotation/database_${organism}.txt;
+
+curl -s -S http://rest.kegg.jp/list/$organism | sed "s/$organism\://" > $DIR/mapping/DB/gene_list.txt;
+
+#perl replaceIDS.pl res_${organism}.txt geneSymWithID_9606.txt > res_${organism}_sym.txt;
+
+#cat res_${organism}.txt |awk 'BEGIN { FS = "\t" } ; {print $1"\tKEGG\t"$2}' > res_${organism}_geneid.txt
+
+

@@ -1,0 +1,39 @@
+This is the README file for Tie::IxHash, the Perl module that 
+implements ordered in-memory associative arrays.
+
+It requires:
+   Perl Version 5.005 or later.
+
+If you have been led to believe that associative arrays in perl
+don't preserve order, and if you have ever craved for that feature,
+this module is for you.  Simply declare a "tie" for the hash variable
+that you want to be order-preserving, and forget that limitation
+ever existed.  You can do other nifty things with the tied hash object
+that you may be used to doing with arrays, like Push(), Pop() and 
+Splice().
+
+If you don't know what "tie" means, you should look at the
+perltie(1) manpage in a recent perl distribution, or in the
+index of one of the numerous books on perl.
+
+If you don't know what "perl" is, you don't need this software.
+ 
+See the embedded documentation in the module file for details.
+
+Don't forget to send your comments!
+
+ - Sarathy.
+   gsar@umich.edu
+
+-----------
+
+Installation:
+
+   perl Makefile.PL
+   make install
+
+If you run into problems due to whatever reason in running the above,
+simply move the file IxHash.pm over into $PERL5LIB/Tie/IxHash.pm (where
+$PERL5LIB stands for the place where your standard perl library files
+are located) and you'll be okay.
+

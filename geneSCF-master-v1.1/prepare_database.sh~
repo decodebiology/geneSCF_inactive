@@ -1,0 +1,34 @@
+#!/bin/bash
+database=$1
+organism=$2
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DT=`/bin/date`
+if [[ $database == "KEGG" ]]; then
+
+
+sh ${DIR}/class/lib/db/update_kegg.sh ${organism} $DIR;
+
+exit 1;
+fi
+if [[ $database == "GO" ]]; then
+
+
+sh ${DIR}/class/lib/db/update_geneontology.sh ${organism} $DIR;
+
+exit 1;
+fi
+if [[ $database == "NCG" ]]; then
+
+
+echo -e "\nDatabase not supported\n";
+
+exit 1;
+fi
+if [[ $database == "REACTOME" ]]; then
+
+
+echo -e "\nError: Database not supported. Please check the user manual.\nUsage: prepare_database.sh [KEGG|GO] [hsa|goa_human]\n";
+
+exit 1;
+fi

@@ -1,0 +1,34 @@
+#!/bin/bash
+database=$1
+organism=$2
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
+DT=`/bin/date`;
+
+if [ $database == "GO_all" ] || [ $database == "GO_CC" ] || [ $database == "GO_MF" ] || [ $database == "GO_BP" ]; then
+
+$database="GO";
+
+fi
+
+if [ $database == "KEGG" ] || [ $database == "GO" ]; then
+
+
+sh ${DIR}/class/lib/db/update_${database}.sh ${organism} $DIR;
+
+exit 1;
+fi
+if [ $database == "NCG" ] || [ $database == "REACTOME" ]; then
+
+
+echo -e "\nError: Database $database not supported. Please check the user manual for supported databases.\n";
+
+
+else
+echo -e "\nError: Database $database not supported. Please check the user manual for supported databases.\n";
+
+
+exit 1;
+fi
+
+
