@@ -1,6 +1,6 @@
 Gene Set Clustering based on Functional annotation
 ----------------------------------------------------------------------------
-https://github.com/santhilalsubhash/geneSCF/wiki
+http://genescf.kandurilab.org/index.php
 
 INSTALL:
 
@@ -48,17 +48,12 @@ Options:
 
 
 --------------------------
-Cite using: 
+Cite project webpage: 
 
-MEG3 long noncoding RNA regulates TGF-β pathway genes through formation of RNA-DNA triplex structures.
-Mondal T, Subhash S, Vaid R, Enroth S, Sireesha K , Reinius B, Mitra S, Mohammed A, James AR, Hoberg E, Moustakas ,
-Gyllensten U, Jones S, Gustafsson C, Sims AH, Westerlund F, Gorab E and Chandrasekhar Kanduri. Nature Communications 6, Article number: 7743 doi:10.1038/ncomms8743
-
-http://www.nature.com/ncomms/2015/150724/ncomms8743/full/ncomms8743.html
+https://github.com/santhilalsubhash/geneSCF/
 
 
 --------------------------
 Author: Santhilal Subhash
 santhilal.subhash@gu.se
 Last Updated: 2015 June 05
-https://github.com/santhilalsubhash/geneSCF/wiki
