@@ -1,6 +1,5 @@
 Gene Set Clustering based on Functional annotation
 ----------------------------------------------------------------------------
-http://genescf.kandurilab.org/index.php
 
 INSTALL:
 
