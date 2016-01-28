@@ -1,0 +1,77 @@
+#!/bin/bash
+#database=$1
+#organism=$2
+
+
+for i in "$@"
+do
+case $i in
+    -t=*|--gtype=*)
+    GTYPE="${i#*=}"
+    ;;
+
+   -db=*|--database=*)
+    database="${i#*=}"
+    ;;
+    -org=*|--organism=*)
+    organism="${i#*=}"
+    ;;
+    -h*|--help)
+    echo -e "\n\nprepare_database USAGE: \n\n./prepare_database -db=[GO_all|GO_BP|GO_MF|GO_CC|KEGG|REACTOME|NCG] -org=[see,org_codes_help]\n\n==========\nOptions: ALL PARAMETERS MUST BE SPECIFIED\n==========\n\n[-db= | --database=]\tOptions:[GO_all|GO_BP|GO_MF|GO_CC|KEGG|REACTOME] \n\n[-org= | --organism=]\tOptions:[see,org_codes_help]\n\n";
+exit 1;
+    ;;
+    *)
+            # unknown option
+    ;;
+esac
+done
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )";
+DT=`/bin/date`;
+
+if [ $# -eq 0 ]; then
+    echo -e "\n\nPlease use:\n\n./prepare_database -h \n\n(or)\n\n./prepare_database --help \n\n for help\n";
+	exit 1;
+fi
+
+if [ -z $database ]; then
+    echo "Error:Please specify one of these databses GO_all,GO_BP,GO_MF,GO_CC,KEGG,NCG,REACTOME";
+	exit 1;
+fi
+if [ -z $organism ]; then
+
+echo "Error:Please specify organism --organism. For KEGG and Geneontology use 'org_codes_help' folder comes with GeneSCF; For REACTOME and NCG use 'Hs'.";
+
+exit 1;
+
+fi
+
+
+
+if [ $database == "GO_all" ] || [ $database == "GO_CC" ] || [ $database == "GO_MF" ] || [ $database == "GO_BP" ]; then
+
+database="GO";
+
+fi
+
+if [ $database == "KEGG" ] || [ $database == "GO" ] || [ $database == "REACTOME" ]; then
+
+
+sh ${DIR}/class/lib/db/update_${database}.sh ${organism} $DIR;
+
+exit 1;
+fi
+if [ $database == "NCG" ]; then
+
+
+echo -e "\nError: Database $database not supported. Please check the user manual for supported databases.\n";
+
+
+else
+echo -e "\nError: Database $database not supported. Please check the user manual for supported databases.\n";
+
+
+exit 1;
+fi
+
+
