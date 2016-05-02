@@ -15,4 +15,4 @@ https://github.com/santhilalsubhash/geneSCF
 Author: Santhilal Subhash
 santhilal.subhash@gu.se
 Last Updated: 2016/02/24
-https://genescf.kandurilab.org
+http://genescf.kandurilab.org
