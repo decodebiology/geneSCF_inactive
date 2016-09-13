@@ -8,8 +8,7 @@ For updates about GeneSCF, visit hosting website: http://genescf.kandurilab.org
 --------------------------
 Cite using: 
 
-Subhash S and Kanduri C. GeneSCF: a real-time based functional enrichment tool with support for multiple organisms. 
-BMC Bioinformatics 2016, 17:365,
+Subhash S and Kanduri C. GeneSCF: a real-time based functional enrichment tool with support for multiple organisms. BMC Bioinformatics 2016, 17:365, http://www.biomedcentral.com/1471-2105/17/365
 
 --------------------------
 Author: Santhilal Subhash
