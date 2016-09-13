@@ -6,10 +6,10 @@ For updates about GeneSCF, visit hosting website: http://genescf.kandurilab.org
 
 
 --------------------------
-Cite using project website: 
+Cite using: 
 
-https://github.com/santhilalsubhash/geneSCF
-
+Subhash S and Kanduri C. GeneSCF: a real-time based functional enrichment tool with support for multiple organisms. 
+BMC Bioinformatics 2016, 17:365,
 
 --------------------------
 Author: Santhilal Subhash
