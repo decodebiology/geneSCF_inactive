@@ -1,5 +1,11 @@
 # GeneSCF
 
+``Update``: 2020/09
+
+New GitHub page is releasing soon for GeneSCF, https://github.com/genescf/GeneSCF
+
+
+``Update``: 2016/08
 ```diff
 - GitHub for GeneSCF discontinued. 
 + Please visit http://genescf.kandurilab.org to download latest version of GeneSCF.
@@ -25,7 +31,7 @@ BioStars: https://www.biostars.org/p/108669/
 
 GitHub: https://github.com/santhilalsubhash/geneSCF/issues
 
-Email: santhilal.subhash@gu.se
+Email: santhilalsubhash@gmail.com
 
 
 
