@@ -10,12 +10,6 @@ New GitHub page is up and running for GeneSCF, https://github.com/genescf/GeneSC
 New GitHub page is releasing soon for GeneSCF, https://github.com/genescf/GeneSCF
 
 
-``Update``: 2016/08
-```diff
-- GitHub for GeneSCF discontinued. 
-+ Please visit http://genescf.kandurilab.org to download latest version of GeneSCF.
-
-```
 # Gene Set Clustering based on Functional annotation 
 ----------------------------------------------------------------------------
 GeneSCF from v1.1 supports all organisms from KEGG and also from Gene Ontology. This update will have real-time funtional enrichment feature.
