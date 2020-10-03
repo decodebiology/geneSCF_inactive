@@ -1,5 +1,10 @@
 # GeneSCF
 
+
+``Update``: 2020/10/03
+
+New GitHub page is up and running for GeneSCF, https://github.com/genescf/GeneSCF
+
 ``Update``: 2020/09
 
 New GitHub page is releasing soon for GeneSCF, https://github.com/genescf/GeneSCF
