@@ -37,7 +37,7 @@ Email: santhilalsubhash@gmail.com
 --------------------------
 Correspondance: Santhilal Subhash
 
-santhilal.subhash@gu.se
+santhilalsubhash@gmail.com
 
 Last Updated: 2020/10/03
 
